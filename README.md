@@ -2,7 +2,7 @@
 
 A multi-page responsive website for FortGame, a 24/7 cyber club in Astana. Final project by Sultan Uazhanov, Kaisar Arysbek and Dias Turdaly (group SE-2511).
 
-**Live website:** https://sultan2511se.github.io/fortgame-cyberclub/
+**Live website:** https://kakds.github.io/fortgame-cyberclub/
 
 Audience: students, gamers and esports teams in Astana who want to check prices, see free seats and book a session online.
 
