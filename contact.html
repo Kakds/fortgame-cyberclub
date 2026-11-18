@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | FortGame CyberClub Astana</title>
+    <meta name="description" content="Contact FortGame CyberClub in Astana: address, phone, map, contact form and answers to common questions.">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- applies the saved light/dark theme before the page paints -->
+    <script src="js/theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <img src="images/logo.jpg" alt="FortGame logo" width="40" height="40">
+            <span>FortGame</span>
+        </a>
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="games.html">Game deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+            <div id="authSlot"><a class="btn btn-primary btn-sm" href="login.html">Log in</a></div>
+            <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</header>
+<main id="main">
+    <section class="page-head">
+        <div class="container">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+            <h1>Talk to the admin</h1>
+            <p class="lead">Questions about booking, tournaments or a lost headset? Write to us and an admin on shift will reply within 2 hours.</p>
+        </div>
+    </section>
+
+    <section class="section-tight">
+        <div class="container split" style="align-items:start">
+            <div>
+                <ul class="contact-list">
+                    <li><span class="game-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><div><strong>Address</strong><span>8 Imanova Street, Astana</span></div></li>
+                    <li><span class="game-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span><div><strong>Phone</strong><a href="tel:+77777777777">+7 777 777 77 77</a></div></li>
+                    <li><span class="game-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span><div><strong>Email</strong><a href="mailto:support@fortgame.kz">support@fortgame.kz</a></div></li>
+                    <li><span class="game-icon"><i class="bi bi-clock" aria-hidden="true"></i></span><div><strong>Hours</strong><span>24/7, no days off</span></div></li>
+                </ul>
+                <iframe class="map-frame" style="margin-top:1.75rem" title="Map: 8 Imanova Street, Astana" loading="lazy"
+                        src="https://maps.google.com/maps?q=Imanov%20Street%208%2C%20Astana&amp;z=15&amp;output=embed"></iframe>
+            </div>
+            <div class="panel">
+                <h2 style="font-size:1.6rem">Send a message</h2>
+                <div class="form-alert ok" id="contactSuccess" hidden role="status"><i class="bi bi-check-circle" aria-hidden="true"></i><span></span></div>
+                <form id="contactForm" novalidate style="margin-top:1rem">
+                    <div class="form-grid">
+                    <div class="field ">
+                        <label for="ctName">Name</label>
+                        <input class="input" type="text" id="ctName" placeholder="Aruzhan Sarsenova" autocomplete="name">
+                        <p class="field-error" id="ctName-error" aria-live="polite"></p>
+                    </div>
+                    <div class="field ">
+                        <label for="ctPhone">Phone</label>
+                        <input class="input" type="tel" id="ctPhone" placeholder="+7 707 123 45 67" autocomplete="tel" inputmode="tel">
+                        <p class="field-error" id="ctPhone-error" aria-live="polite"></p>
+                    </div>
+                    <div class="field full">
+                        <label for="ctEmail">Email</label>
+                        <input class="input" type="text" id="ctEmail" placeholder="name@example.com" autocomplete="email" inputmode="email">
+                        <p class="field-error" id="ctEmail-error" aria-live="polite"></p>
+                    </div>
+                    <div class="field full">
+                        <label for="ctTopic">Topic</label>
+                        <select class="select" id="ctTopic">
+                            <option value="">Choose a topic</option><option>Booking</option><option>Tournaments</option><option>Lost and found</option><option>Partnership</option><option>Other</option>
+                        </select>
+                        <p class="field-error" id="ctTopic-error" aria-live="polite"></p>
+                    </div>
+                    <div class="field full">
+                        <label for="ctMessage">Message</label>
+                        <textarea class="textarea" id="ctMessage" placeholder="Tell us what you need"></textarea>
+                        <span class="hint"><span id="ctCount">0 / 500</span></span>
+                        <p class="field-error" id="ctMessage-error" aria-live="polite"></p>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top:1.2rem"><i class="bi bi-send" aria-hidden="true"></i> Send message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container" style="max-width:860px">
+            <div class="section-head"><h2>Frequently asked questions</h2><p>Type a word to filter the answers.</p></div>
+            <div class="search-box" style="margin-bottom:1.25rem">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <label class="visually-hidden" for="faqSearch">Search the FAQ</label>
+                <input class="input" type="search" id="faqSearch" placeholder="e.g. price, age, cancel" autocomplete="off">
+            </div>
+            <div class="faq" id="faqList">
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>What are your opening hours?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>We are open 24/7, every day of the year, including holidays.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>How do I book a seat?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>Create an account, open Rooms or Pricing, press Book and choose a date and time. The booking appears in your profile right away.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>Can I cancel a booking?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>Yes. Open your profile and press Cancel next to the booking. Cancelling is free up to the start time.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>How much does an hour cost?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>From 1 000 ₸ per hour in the Standard Hall. Members get 10% off. See the Pricing page for every zone.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>Can my team train in the club?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>Yes. The BootCamp room is isolated, has 240 Hz monitors and a coach screen. Book it through the VIP Room option or message us.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>Is there an age limit?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>Guests under 16 can stay until 22:00. After 22:00 the club is 16+ only, and we check ID.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" aria-expanded="false"><span>Can I bring my own mouse and keyboard?</span><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+                    <div class="faq-a"><div><p>Of course. Every PC has free USB ports and the admin can help you set up your profile.</p></div></div>
+                </div>
+            </div>
+            <div class="empty-state" id="faqEmpty" hidden style="margin-top:1rem"><i class="bi bi-chat-dots" aria-hidden="true"></i>No answer matches that. Send us a message above.</div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a class="brand" href="index.html"><img src="images/logo.jpg" alt="" width="40" height="40"><span>FortGame</span></a>
+                <p class="muted small" style="margin-top:1rem">A 24/7 cyber club on Imanova Street, Astana. 80 gaming PCs, VIP rooms, a BootCamp for teams and a PS5 lounge.</p>
+            </div>
+            <div>
+                <h3>Club</h3>
+                <ul class="footer-links">
+                    <li><a href="rooms.html">Rooms &amp; games</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="games.html">Game deals</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Account</h3>
+                <ul class="footer-links">
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="profile.html">My profile</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tournament news</h3>
+                <p class="muted small">One email a week: new cups, night deals, no spam.</p>
+                <form id="newsletterForm" novalidate>
+                    <label class="visually-hidden" for="newsEmail">Email</label>
+                    <div class="newsletter">
+                        <input class="input" type="text" inputmode="email" id="newsEmail" placeholder="name@example.com" autocomplete="email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                    <p class="field-error" id="newsEmail-error" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year">2026</span> FortGame CyberClub. Final project by Sultan Uazhanov, Kaisar Arysbek and Dias Turdaly.</span>
+            <span>8 Imanova Street, Astana. Open 24/7.</span>
+        </div>
+    </div>
+</footer>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

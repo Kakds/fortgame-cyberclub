@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FortGame CyberClub Astana</title>
+    <meta name="description" content="FortGame is a 24/7 cyber club in Astana with 80 gaming PCs, VIP rooms and a PS5 lounge. Check free seats and book online.">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- applies the saved light/dark theme before the page paints -->
+    <script src="js/theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <img src="images/logo.jpg" alt="FortGame logo" width="40" height="40">
+            <span>FortGame</span>
+        </a>
+        <nav class="main-nav" id="mainNav" aria-label="Main">
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="games.html">Game deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+            <div id="authSlot"><a class="btn btn-primary btn-sm" href="login.html">Log in</a></div>
+            <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</header>
+<main id="main">
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1><span class="line">Astana's 24/7</span><span class="line hero-title-outline">cyber club</span></h1>
+                <p class="lead">80 tuned gaming PCs, private VIP rooms and a PS5 lounge on Imanova Street. Pick a free seat on the map and book it in under a minute.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="rooms.html?book=standard">Book a seat <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                    <a class="btn btn-ghost" href="pricing.html">See prices</a>
+                </div>
+                <div class="hero-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> Open 24/7</span>
+                    <span><i class="bi bi-geo-alt" aria-hidden="true"></i> 8 Imanova St</span>
+                    <span><i class="bi bi-ethernet" aria-hidden="true"></i> 1 Gbit/s wired</span>
+                </div>
+            </div>
+
+            <div class="seatmap" id="seatmap" aria-describedby="seatTip">
+                <div class="seatmap-head">
+                    <div>
+                        <h2 style="font-size:1.05rem;font-family:var(--font-body)">Seats right now</h2>
+                        <div class="seatmap-free"><span id="freeCount">0</span><small>of 80 PCs free</small></div>
+                    </div>
+                    <span class="badge" title="The real club syncs this map with the admin panel">Demo data</span>
+                </div>
+                <div class="seatmap-zone">
+                    <h3>Main hall</h3>
+                    <div class="seats" id="seatsMain"></div>
+                </div>
+                <div class="seatmap-pair">
+                    <div class="seatmap-zone"><h3>VIP room</h3><div class="seats" id="seatsVip"></div></div>
+                    <div class="seatmap-zone"><h3>BootCamp</h3><div class="seats" id="seatsCamp"></div></div>
+                </div>
+                <div class="seatmap-legend">
+                    <span><i class="dot" aria-hidden="true"></i> Free</span>
+                    <span><i class="dot busy" aria-hidden="true"></i> In a session</span>
+                </div>
+                <p class="seat-tip" id="seatTip">Hover a seat to see its status.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-tight">
+        <div class="container">
+            <div class="stats">
+                <div class="stat"><strong data-count="80">80</strong><span>gaming PCs</span></div>
+                <div class="stat"><strong data-count="2500" data-suffix="+">2,500+</strong><span>registered players</span></div>
+                <div class="stat"><strong data-count="150" data-suffix="+">150+</strong><span>tournaments hosted</span></div>
+                <div class="stat"><strong data-count="240" data-suffix=" Hz">240 Hz</strong><span>monitors in VIP</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Three zones, one club</h2>
+                <p>Play solo in the main hall, take your squad to a private room, or grab friends and controllers for the PS5 lounge.</p>
+            </div>
+            <div class="grid-3">
+                <article class="zone-card">
+                    <div class="zone-media"><img src="images/hall-main.jpg" alt="Main hall with rows of gaming PCs under blue neon lights" loading="lazy"><span class="badge">60 seats</span></div>
+                    <div class="zone-body">
+                        <h3>Standard Hall</h3>
+                        <p>RTX 4060 PCs, 144 Hz screens and HyperX headsets. The everyday choice for ranked games.</p>
+                        <div class="zone-foot"><span class="price-tag">1 000 ₸ <small>/ hour</small></span><a class="btn btn-ghost btn-sm" href="rooms.html?book=standard">Book</a></div>
+                    </div>
+                </article>
+                <article class="zone-card">
+                    <div class="zone-media"><img src="images/vip-lounge.jpg" alt="Private VIP lounge with a large screen and soft lighting" loading="lazy"><span class="badge">20 seats</span></div>
+                    <div class="zone-body">
+                        <h3>VIP Room &amp; BootCamp</h3>
+                        <p>RTX 4080, 240 Hz, soundproof walls. Built for 5-stack scrims and long tournament nights.</p>
+                        <div class="zone-foot"><span class="price-tag">1 800 ₸ <small>/ hour</small></span><a class="btn btn-ghost btn-sm" href="rooms.html?book=vip">Book</a></div>
+                    </div>
+                </article>
+                <article class="zone-card">
+                    <div class="zone-media"><img src="images/ps-room.jpg" alt="PS5 lounge with a sofa and a big TV in purple light" loading="lazy"><span class="badge">4 rooms</span></div>
+                    <div class="zone-body">
+                        <h3>PS5 Lounge</h3>
+                        <p>A sofa, four controllers and a 65" OLED. FC 25, Tekken 8 and Mortal Kombat ready to go.</p>
+                        <div class="zone-foot"><span class="price-tag">2 000 ₸ <small>/ hour</small></span><a class="btn btn-ghost btn-sm" href="rooms.html?book=ps5">Book</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="container split">
+            <div>
+                <h2>Booking takes three steps</h2>
+                <p class="muted">No calls, no queue at the desk. Your booking shows up in your profile right away.</p>
+                <ol class="timeline" style="margin-top:1.5rem">
+                    <li><strong>Create an account</strong><p>Members pay 10% less on every session.</p></li>
+                    <li><strong>Choose a zone and time</strong><p>Hourly from 10:00, or the night package from 22:00 to 08:00.</p></li>
+                    <li><strong>Show your ID at reception</strong><p>Your seat is held for 15 minutes after the start time.</p></li>
+                </ol>
+                <a class="btn btn-primary" href="signup.html">Create a free account</a>
+            </div>
+            <img class="rounded-img" src="images/hero-gamer.jpg" alt="Player in headphones at a gaming setup with two monitors" style="aspect-ratio:4/3" loading="lazy">
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="container">
+            <div class="section-head"><h2>What you get at FortGame</h2></div>
+            <div class="grid-4">
+                <div class="feature"><i class="bi bi-cpu" aria-hidden="true"></i><h3>Fresh hardware</h3><p>Intel i7/i9, RTX 40-series and SSDs in every PC. Games are installed and updated overnight.</p></div>
+                <div class="feature"><i class="bi bi-cup-hot" aria-hidden="true"></i><h3>Food to your desk</h3><p>Order snacks, coffee or a hot meal from your seat. No need to pause the match.</p></div>
+                <div class="feature"><i class="bi bi-people" aria-hidden="true"></i><h3>Team BootCamp</h3><p>An isolated room with a coach screen for esports teams preparing for cups.</p></div>
+                <div class="feature"><i class="bi bi-shield-check" aria-hidden="true"></i><h3>Safe at night</h3><p>Admins on shift around the clock. Guests under 16 can stay until 22:00.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+        <div class="container">
+            <div class="banner">
+                <img src="images/tournament.jpg" alt="Crowd watching a tournament on big screens in the club" loading="lazy">
+                <div class="banner-body">
+                    <h2>Friday cups for 5v5 teams</h2>
+                    <p>CS2 and Valorant brackets every Friday at 19:00. Free entry for members, prize pool from 100 000 ₸.</p>
+                    <div class="hero-actions" style="margin-top:1.25rem">
+                        <a class="btn btn-primary" href="signup.html">Join as a member</a>
+                        <a class="btn btn-ghost" style="--btn-fg:#fff;border-color:rgba(255,255,255,.45)" href="contact.html">Register a team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a class="brand" href="index.html"><img src="images/logo.jpg" alt="" width="40" height="40"><span>FortGame</span></a>
+                <p class="muted small" style="margin-top:1rem">A 24/7 cyber club on Imanova Street, Astana. 80 gaming PCs, VIP rooms, a BootCamp for teams and a PS5 lounge.</p>
+            </div>
+            <div>
+                <h3>Club</h3>
+                <ul class="footer-links">
+                    <li><a href="rooms.html">Rooms &amp; games</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="games.html">Game deals</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Account</h3>
+                <ul class="footer-links">
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="profile.html">My profile</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tournament news</h3>
+                <p class="muted small">One email a week: new cups, night deals, no spam.</p>
+                <form id="newsletterForm" novalidate>
+                    <label class="visually-hidden" for="newsEmail">Email</label>
+                    <div class="newsletter">
+                        <input class="input" type="text" inputmode="email" id="newsEmail" placeholder="name@example.com" autocomplete="email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                    <p class="field-error" id="newsEmail-error" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year">2026</span> FortGame CyberClub. Final project by Sultan Uazhanov, Kaisar Arysbek and Dias Turdaly.</span>
+            <span>8 Imanova Street, Astana. Open 24/7.</span>
+        </div>
+    </div>
+</footer>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
